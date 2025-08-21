@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | Др. Зиядова - Детский Инфекционист</title>
+    <meta name="description" content="Услуги по возрастам: новорожденные, груднички, ранний возраст, школьники и подростки. Профилактика, скрининг и вакцинация.">
+    <link rel="canonical" href="https://ziyadovapediatrics.com/ru/services.html">
+    <link rel="alternate" hreflang="az" href="https://ziyadovapediatrics.com/az/services.html">
+    <link rel="alternate" hreflang="ru" href="https://ziyadovapediatrics.com/ru/services.html">
+    <link rel="alternate" hreflang="en" href="https://ziyadovapediatrics.com/en/services.html">
+
+    <style>
+        :root { 
+            --primary: #2563eb; 
+            --secondary: #10b981; 
+            --text: #1f2937; 
+            --muted: #6b7280; 
+            --bg: #ffffff; 
+            --soft: #f9fafb; 
+            --radius: 12px; 
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #1f2937; 
+            background: #ffffff; 
+            line-height: 1.6; 
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .header { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(255,255,255,.95); 
+            backdrop-filter: blur(8px); 
+            border-bottom: 1px solid #e5e7eb; 
+            z-index: 100; 
+        }
+        .header-content { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 1rem 0; 
+        }
+        .logo { 
+            text-decoration: none; 
+            color: #2563eb; 
+            font-weight: 700; 
+            font-size: 1.25rem; 
+        }
+        .nav { display: flex; align-items: center; gap: 1rem; }
+        .nav-list { list-style: none; display: flex; gap: 1rem; }
+        .nav-link { 
+            text-decoration: none; 
+            color: #374151; 
+            font-weight: 500; 
+        }
+        .nav-link.active { color: #2563eb; }
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: .5rem; 
+            padding: .625rem 1rem; 
+            border: none; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: .2s; 
+        }
+        .btn-primary { 
+            background: #2563eb; 
+            color: #fff; 
+        }
+        .btn-primary:hover { 
+            opacity: .95; 
+            transform: translateY(-1px); 
+        }
+        .hero { 
+            background: linear-gradient(135deg, #2563eb, #10b981); 
+            color: #fff; 
+            padding: 3rem 0; 
+            margin-bottom: 2rem; 
+        }
+        .hero h1 { 
+            font-size: 2rem; 
+            margin-bottom: .5rem; 
+            color: #fff; 
+        }
+        .hero p { 
+            opacity: .9; 
+            color: #fff; 
+        }
+        .section { padding: 2rem 0; }
+        .card { 
+            background: #fff; 
+            border: 1px solid #e5e7eb; 
+            border-radius: 12px; 
+            padding: 1.25rem; 
+            box-shadow: 0 4px 10px rgba(0,0,0,.04); 
+        }
+        .grid { 
+            display: grid; 
+            gap: 1rem; 
+            grid-template-columns: repeat(1,1fr); 
+        }
+        @media(min-width:768px) { 
+            .grid { grid-template-columns: repeat(2,1fr); } 
+        }
+        ul { margin-left: 1rem; }
+        li { 
+            margin: .35rem 0; 
+            color: #374151; 
+        }
+        .age { 
+            font-weight: 700; 
+            margin-bottom: .5rem; 
+            color: #1f2937; 
+        }
+        .floating-whatsapp { 
+            position: fixed; 
+            right: 1.5rem; 
+            bottom: 1.5rem; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            background: #25d366; 
+            color: #fff; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+            box-shadow: 0 10px 25px rgba(0,0,0,.2); 
+            z-index: 1000; 
+            transition: .3s; 
+        }
+        .floating-whatsapp:hover { 
+            transform: scale(1.08); 
+            background: #128c7e; 
+        }
+        .footer { 
+            border-top: 1px solid #e5e7eb; 
+            margin-top: 3rem; 
+            padding: 1.5rem 0; 
+            color: #6b7280; 
+            font-size: .9rem; 
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a class="logo" href="/ru/">Др. Зиядова</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="/ru/">Главная</a></li>
+                        <li><a class="nav-link" href="/ru/about.html">О нас</a></li>
+                        <li><a class="nav-link active" href="/ru/services.html">Услуги</a></li>
+                        <li><a class="nav-link" href="/ru/diseases/">Заболевания</a></li>
+                        <li><a class="nav-link" href="/ru/gallery.html">Галерея</a></li>
+                        <li><a class="nav-link" href="/ru/contact.html">Контакты</a></li>
+                    </ul>
+                    <select id="language-switcher" class="nav-link">
+                        <option value="az">AZ</option>
+                        <option value="ru" selected>RU</option>
+                        <option value="en">EN</option>
+                    </select>
+                    <a href="https://wa.me/994504662244?text=Здравствуйте! Хочу записаться на прием к детскому врачу." class="btn btn-primary">Запись</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Услуги</h1>
+                <p>Профилактика, скрининг и вакцинация по возрастным группам</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                    <div class="card">
+                        <div class="age">Период новорожденности (0–28 дней)</div>
+                        <ul>
+                            <li>Первичный осмотр после рождения: признаки инфекции (риски сепсиса, пневмонии, менингита)</li>
+                            <li>Скрининг на материнские инфекции: сифилис, гепатит B/C, ВИЧ, ЦМВ, токсоплазмоз (при наличии риска у матери)</li>
+                            <li>Начало вакцинации: гепатит B (1‑я доза), туберкулез (вакцина БЦЖ)</li>
+                            <li>Контроль внутрибольничных инфекций: гигиена, осмотр ушей, глаз и пупочной ранки</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="age">🍼 Грудничковый возраст (1–12 месяцев)</div>
+                        <ul>
+                            <li>Ежемесячный осмотр у детского инфекциониста: температура, кожа, дыхание, питание, функция кишечника</li>
+                            <li>Контроль вакцинации: дифтерия, коклюш, столбняк (АКДС), полиомиелит, Hib, пневмококк, ротавирус и др.</li>
+                            <li>Профилактика гастроэнтеритов и респираторных инфекций: обучение родителей</li>
+                            <li>Первичная оценка иммунной системы: при частых заболеваниях</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <div class="age">👧 Раннее детство (1–6 лет)</div>
+                        <ul>
+                            <li>Ежегодные профилактические осмотры: рост, вес, иммунный статус, мониторинг повторных инфекций</li>
+                            <li>Завершение вакцинации: КПК (корь, краснуха, паротит), гепатит A, ветряная оспа и др.</li>
+                            <li>Скрининг на паразитарные инфекции: у детей, посещающих детсад и коллективы</li>
+                            <li>Проверка хронического носительства: гепатиты, ТБ в группах риска</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="age">🧒 Школьный возраст (6–12 лет)</div>
+                        <ul>
+                            <li>Ежегодный осмотр: рост-вес, кожа, лимфоузлы, печень и селезенка</li>
+                            <li>Просвещение по инфекционной безопасности: мытье рук, маски, гигиенические навыки</li>
+                            <li>Повторные прививки: ревакцинация КПК, бустер АКДС</li>
+                            <li>Тестирование на туберкулез (проба Манту или IGRA)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <div class="age">🧑 Подростковый возраст (12–18 лет)</div>
+                        <ul>
+                            <li>Ежегодный осмотр у инфекциониста: особенно при хроническом гепатите, Эпштейна–Барр, мононуклеозе, частых ОРИ</li>
+                            <li>Профилактическое просвещение по ИППП</li>
+                            <li>Вакцины против гепатита B и ВПЧ (для девочек и мальчиков)</li>
+                            <li>Мониторинг иммунитета: лабораторная оценка при частой заболеваемости</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="age">🔹 Общие принципы</div>
+                        <ul>
+                            <li>Ежегодный профилактический осмотр у инфекциониста на каждом возрастном этапе</li>
+                            <li>Соблюдение календаря прививок и контроль реакций после вакцинации</li>
+                            <li>Дополнительные обследования для групп риска: недоношенные, дети с иммунодефицитом, хроническими болезнями</li>
+                            <li>Обучающие встречи для родителей: гигиена, здоровое питание, профилактика инфекций</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align:center;margin-top:1rem">
+                    <a class="btn btn-primary" href="https://wa.me/994504662244?text=Здравствуйте! Хочу записаться на прием к детскому врачу.">Связаться в WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">© 2024 Др. Зиядова Педиатрия. Все права защищены.</div>
+    </footer>
+
+    <a href="https://wa.me/994504662244?text=Здравствуйте! Хочу записаться на прием к детскому врачу." class="floating-whatsapp" aria-label="Связаться через WhatsApp">💬</a>
+
+    <link rel="stylesheet" href="/assets/css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/layout.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/components.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/pages.css" media="print" onload="this.media='all'">
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
+
+

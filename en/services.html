@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Dr. Ziyadova - Pediatric Infectious Disease Specialist</title>
+    <meta name="description" content="Age-based pediatric infectious disease services: newborn, infant, early childhood, school age, and adolescent preventive programs and screenings.">
+    <link rel="canonical" href="https://ziyadovapediatrics.com/en/services.html">
+    <link rel="alternate" hreflang="az" href="https://ziyadovapediatrics.com/az/services.html">
+    <link rel="alternate" hreflang="ru" href="https://ziyadovapediatrics.com/ru/services.html">
+    <link rel="alternate" hreflang="en" href="https://ziyadovapediatrics.com/en/services.html">
+
+    <style>
+        :root { 
+            --primary: #2563eb; 
+            --secondary: #10b981; 
+            --text: #1f2937; 
+            --muted: #6b7280; 
+            --bg: #ffffff; 
+            --soft: #f9fafb; 
+            --radius: 12px; 
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #1f2937; 
+            background: #ffffff; 
+            line-height: 1.6; 
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .header { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(255,255,255,.95); 
+            backdrop-filter: blur(8px); 
+            border-bottom: 1px solid #e5e7eb; 
+            z-index: 100; 
+        }
+        .header-content { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 1rem 0; 
+        }
+        .logo { 
+            text-decoration: none; 
+            color: #2563eb; 
+            font-weight: 700; 
+            font-size: 1.25rem; 
+        }
+        .nav { display: flex; align-items: center; gap: 1rem; }
+        .nav-list { list-style: none; display: flex; gap: 1rem; }
+        .nav-link { 
+            text-decoration: none; 
+            color: #374151; 
+            font-weight: 500; 
+        }
+        .nav-link.active { color: #2563eb; }
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: .5rem; 
+            padding: .625rem 1rem; 
+            border: none; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: .2s; 
+        }
+        .btn-primary { 
+            background: #2563eb; 
+            color: #fff; 
+        }
+        .btn-primary:hover { 
+            opacity: .95; 
+            transform: translateY(-1px); 
+        }
+        .hero { 
+            background: linear-gradient(135deg, #2563eb, #10b981); 
+            color: #fff; 
+            padding: 3rem 0; 
+            margin-bottom: 2rem; 
+        }
+        .hero h1 { 
+            font-size: 2rem; 
+            margin-bottom: .5rem; 
+            color: #fff; 
+        }
+        .hero p { 
+            opacity: .9; 
+            color: #fff; 
+        }
+        .section { padding: 2rem 0; }
+        .card { 
+            background: #fff; 
+            border: 1px solid #e5e7eb; 
+            border-radius: 12px; 
+            padding: 1.25rem; 
+            box-shadow: 0 4px 10px rgba(0,0,0,.04); 
+        }
+        .grid { 
+            display: grid; 
+            gap: 1rem; 
+            grid-template-columns: repeat(1,1fr); 
+        }
+        @media(min-width:768px) { 
+            .grid { grid-template-columns: repeat(2,1fr); } 
+        }
+        ul { margin-left: 1rem; }
+        li { 
+            margin: .35rem 0; 
+            color: #374151; 
+        }
+        .age { 
+            font-weight: 700; 
+            margin-bottom: .5rem; 
+            color: #1f2937; 
+        }
+        .floating-whatsapp { 
+            position: fixed; 
+            right: 1.5rem; 
+            bottom: 1.5rem; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            background: #25d366; 
+            color: #fff; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+            box-shadow: 0 10px 25px rgba(0,0,0,.2); 
+            z-index: 1000; 
+            transition: .3s; 
+        }
+        .floating-whatsapp:hover { 
+            transform: scale(1.08); 
+            background: #128c7e; 
+        }
+        .footer { 
+            border-top: 1px solid #e5e7eb; 
+            margin-top: 3rem; 
+            padding: 1.5rem 0; 
+            color: #6b7280; 
+            font-size: .9rem; 
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a class="logo" href="/en/">Dr. Ziyadova</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="/en/">Home</a></li>
+                        <li><a class="nav-link" href="/en/about.html">About</a></li>
+                        <li><a class="nav-link active" href="/en/services.html">Services</a></li>
+                        <li><a class="nav-link" href="/en/diseases/">Diseases</a></li>
+                        <li><a class="nav-link" href="/en/gallery.html">Gallery</a></li>
+                        <li><a class="nav-link" href="/en/contact.html">Contact</a></li>
+                    </ul>
+                    <select id="language-switcher" class="nav-link">
+                        <option value="az">AZ</option>
+                        <option value="ru">RU</option>
+                        <option value="en" selected>EN</option>
+                    </select>
+                    <a href="https://wa.me/994504662244?text=Hello! I would like to make an appointment with the pediatric doctor." class="btn btn-primary">Appointment</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Services</h1>
+                <p>Preventive care, screening and vaccination plans tailored to each age group</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                    <div class="card">
+                        <div class="age">Newborn period (0–28 days)</div>
+                        <ul>
+                            <li>Initial postnatal evaluation: infection signs (risk of sepsis, pneumonia, meningitis)</li>
+                            <li>Maternal infections screening: syphilis, hepatitis B/C, HIV, CMV, toxoplasmosis (if maternal risk)</li>
+                            <li>Start of immunization: Hepatitis B (1st dose), tuberculosis (BCG) vaccine</li>
+                            <li>Hospital-acquired infection control: hygiene, ear, eye and umbilical cord check</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="age">🍼 Infancy (1–12 months)</div>
+                        <ul>
+                            <li>Monthly pediatric infectious specialist check: temperature, skin, breathing, feeding, bowel function</li>
+                            <li>Vaccine monitoring: DPT (diphtheria, pertussis, tetanus), polio, Hib, pneumococcus, rotavirus, etc.</li>
+                            <li>Prevention of gastroenteritis and respiratory infections: parent education</li>
+                            <li>Initial immune system assessment: in cases of frequent illness</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <div class="age">👧 Early childhood (1–6 years)</div>
+                        <ul>
+                            <li>Annual preventive checkups: height, weight, immune status, monitoring of recurrent infections</li>
+                            <li>Completion of vaccines: MMR (measles, rubella, mumps), hepatitis A, varicella, etc.</li>
+                            <li>Parasitic infection screening: for children attending kindergarten and groups</li>
+                            <li>Chronic carrier screening: hepatitis, TB in risk groups</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="age">🧒 School age (6–12 years)</div>
+                        <ul>
+                            <li>Annual preventive exam: height-weight, skin, lymph nodes, liver and spleen assessment</li>
+                            <li>Infectious disease education: handwashing, masks, hygiene habits</li>
+                            <li>Booster vaccinations: MMR revaccination, DTP booster</li>
+                            <li>Tuberculosis testing (Mantoux or IGRA tests)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <div class="age">🧑 Adolescence (12–18 years)</div>
+                        <ul>
+                            <li>Annual infectious disease evaluation: especially for chronic hepatitis, EBV, mononucleosis, recurrent respiratory illnesses</li>
+                            <li>Education for prevention of sexually transmitted infections</li>
+                            <li>Hepatitis B and HPV vaccines (for girls and boys)</li>
+                            <li>Immunity monitoring: laboratory assessment in frequent illness</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="age">🔹 General principles</div>
+                        <ul>
+                            <li>Annual preventive infectious disease checkup at each age stage</li>
+                            <li>Adherence to vaccination schedule and monitoring post-vaccine reactions</li>
+                            <li>Additional testing for risk groups: preterm infants, children with immunodeficiency, chronic diseases</li>
+                            <li>Parent education sessions: hygiene, healthy nutrition, infection prevention</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align:center;margin-top:1rem">
+                    <a class="btn btn-primary" href="https://wa.me/994504662244?text=Hello! I would like to make an appointment with the pediatric doctor.">Contact via WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">© 2024 Dr. Ziyadova Pediatrics. All rights reserved.</div>
+    </footer>
+
+    <a href="https://wa.me/994504662244?text=Hello! I would like to make an appointment with the pediatric doctor." class="floating-whatsapp" aria-label="Contact via WhatsApp">💬</a>
+
+    <link rel="stylesheet" href="/assets/css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/layout.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/components.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/pages.css" media="print" onload="this.media='all'">
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
+
+

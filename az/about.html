@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haqqımızda - Dr. Ziyadova | Uşaq İnfeksion Xəstəlikləri Mütəxəssisi</title>
-    <meta name="description" content="Dr. Ziyadova haqqında ətraflı məlumat. Uşaq infeksion xəstəlikləri sahəsində 10+ illik təcrübə, təhsil və peşəkar fəaliyyət.">
+    <meta name="description" content="Dr. Aytən Ziyadova haqqında ətraflı məlumat. Uşaq infeksion xəstəlikləri sahəsində 10+ illik təcrübə, təhsil və peşəkar fəaliyyət.">
     <meta name="keywords" content="dr ziyadova haqqında, uşaq həkimi təcrübə, pediatrik infeksion xəstəliklər, bakı uşaq həkimi">
     <link rel="canonical" href="https://ziyadovapediatrics.com/az/about.html">
     <link rel="alternate" hreflang="az" href="https://ziyadovapediatrics.com/az/about.html">
@@ -13,7 +13,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="Haqqımızda - Dr. Ziyadova | Uşaq İnfeksion Xəstəlikləri Mütəxəssisi">
-    <meta property="og:description" content="Dr. Ziyadova haqqında ətraflı məlumat. Uşaq infeksion xəstəlikləri sahəsində 10+ illik təcrübə.">
+    <meta property="og:description" content="Dr. Aytən Ziyadova haqqında ətraflı məlumat. Uşaq infeksion xəstəlikləri sahəsində 10+ illik təcrübə.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ziyadovapediatrics.com/az/about.html">
     <meta property="og:locale" content="az_AZ">
@@ -58,12 +58,12 @@
             box-sizing: border-box;
         }
         
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--bg-primary);
-        }
+                 body {
+             font-family: 'Segoe UI', 'Noto Sans', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+             line-height: 1.6;
+             color: var(--text-primary);
+             background-color: var(--bg-primary);
+         }
         
         .container {
             max-width: 1200px;
@@ -130,22 +130,121 @@
             background: var(--primary-dark);
         }
         
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .hero-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #10b981 100%);
             color: white;
-            padding: 4rem 0;
+            padding: 6rem 0 4rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
         }
         
-        .page-title {
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(255,255,255,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.08) 0%, transparent 40%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            text-align: left;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            font-family: 'Segoe UI', 'Noto Sans', 'Roboto', sans-serif;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            color: #e0f2fe;
+            font-family: 'Segoe UI', 'Noto Sans', 'Roboto', sans-serif;
+        }
+        
+        .hero-image {
+            text-align: center;
+            position: relative;
+        }
+        
+                 .hero-image img {
+             width: 100%;
+             max-width: 300px;
+             max-height: 350px;
+             object-fit: cover;
+             border-radius: 20px;
+             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+             transition: all 0.3s ease;
+         }
+        
+        .hero-image:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stat {
+            text-align: center;
+            background: rgba(255,255,255,0.08);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+        
+        .hero-stat:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .hero-stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            display: block;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
         }
         
-        .page-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 500;
+            color: #e0f2fe;
         }
         
         .breadcrumb {
@@ -179,72 +278,135 @@
         }
         
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
         
         .section-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: var(--text-primary);
+            text-align: center;
         }
         
-        .about-content {
+        .story-section {
+            background: var(--bg-secondary);
+        }
+        
+        .story-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: start;
-            margin-bottom: 3rem;
+            align-items: center;
         }
         
-        .about-text h2 {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
+        .story-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             color: var(--primary-color);
         }
         
-        .about-text p {
-            margin-bottom: 1rem;
+        .story-text p {
+            margin-bottom: 1.5rem;
             color: var(--text-secondary);
             line-height: 1.8;
+            font-size: 1.1rem;
         }
         
-        .about-image {
+        .story-image {
             text-align: center;
+            position: relative;
         }
         
-        .about-image img {
+        .story-image img {
             width: 100%;
             max-width: 400px;
             border-radius: var(--radius);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
         }
         
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+        .story-image:hover img {
+            transform: scale(1.05);
         }
         
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
+        .timeline-section {
+            position: relative;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+        
+        .timeline-content {
             background: white;
+            padding: 2rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow-md);
+            position: relative;
         }
         
-        .stat-item h3 {
-            font-size: 2.5rem;
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -60px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -60px;
+        }
+        
+        .timeline-year {
+            color: var(--accent-color);
             font-weight: 700;
-            color: var(--primary-color);
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
         
-        .stat-item p {
+        .timeline-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-description {
             color: var(--text-secondary);
-            font-weight: 500;
         }
         
         .expertise-grid {
@@ -256,50 +418,93 @@
         
         .expertise-card {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow-md);
             border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
         
         .expertise-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
         
         .expertise-card p {
             color: var(--text-secondary);
         }
         
-        .education {
-            background: var(--bg-secondary);
+        .languages-section {
+            background: var(--bg-accent);
         }
         
-        .education-list {
-            list-style: none;
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .education-item {
+        .language-card {
             background: white;
             padding: 1.5rem;
             border-radius: var(--radius);
-            margin-bottom: 1rem;
+            text-align: center;
             box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
         
-        .education-item h4 {
+        .language-card:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .language-name {
+            font-weight: 600;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
         
-        .education-item p {
+        .language-level {
             color: var(--text-secondary);
-            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
         
-        .education-year {
-            color: var(--accent-color);
-            font-weight: 600;
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
         
         .footer {
@@ -366,17 +571,94 @@
                 display: none;
             }
             
-            .page-title {
-                font-size: 2rem;
+            .hero-section {
+                padding: 3rem 0 2rem;
+                min-height: 70vh;
             }
             
-            .about-content {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            
+            .hero-stat {
+                padding: 1.2rem 1.5rem;
+                min-width: 100px;
+            }
+            
+            .hero-stat-number {
+                font-size: 2.2rem;
+            }
+            
+                         .hero-image img {
+                 max-width: 250px;
+                 max-height: 280px;
+             }
+            
+            .story-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
             
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 50px;
+            }
+            
+            .timeline-content::before {
+                left: -35px !important;
+            }
+            
             .breadcrumb-list {
                 flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-stat {
+                padding: 1rem 1.2rem;
+            }
+            
+            .hero-stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .hero-stat-label {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -386,17 +668,18 @@
     {
         "@context": "https://schema.org",
         "@type": "Physician",
-        "name": "Dr. Ziyadova",
+        "name": "Dr. Aytən Ziyadova",
         "medicalSpecialty": "Педиатрия, Инфекционные заболевания",
         "description": "Специалист по детским инфекционным заболеваниям с более чем 10-летним опытом",
         "url": "https://ziyadovapediatrics.com/az/about.html",
         "telephone": "+994504662244",
+        "email": "aytenziyadova@mail.com",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Баку",
             "addressCountry": "AZ"
         },
-        "availableLanguage": ["az", "ru", "en"],
+        "availableLanguage": ["az", "ru", "en", "tr", "ko"],
         "image": "https://ziyadovapediatrics.com/images/doctor-profile.jpg",
         "sameAs": [
             "https://www.instagram.com/dr.ziyadova"
@@ -408,7 +691,7 @@
         ],
         "worksFor": {
             "@type": "MedicalOrganization",
-            "name": "Dr. Ziyadova Pediatrics"
+            "name": "Referans Mərdəkan Hospital"
         }
     }
     </script>
@@ -443,13 +726,34 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">Haqqımızda</h1>
-                <p class="page-subtitle">Dr. Ziyadova və onun uşaq infeksion xəstəlikləri sahəsindəki peşəkar fəaliyyəti haqqında</p>
-            </div>
-        </section>
+                 <!-- Hero Section -->
+         <section class="hero-section">
+             <div class="container">
+                 <div class="hero-content">
+                     <div class="hero-text">
+                         <h1 class="hero-title">Dr. Aytən Ziyadova</h1>
+                         <p class="hero-subtitle">Uşaqların sağlamlığı üçün səyahət</p>
+                                                   <div class="hero-stats">
+                              <div class="hero-stat">
+                                  <span class="hero-stat-number">10+</span>
+                                  <span class="hero-stat-label">İllik Təcrübə</span>
+                              </div>
+                              <div class="hero-stat">
+                                  <span class="hero-stat-number">5</span>
+                                  <span class="hero-stat-label">Dil</span>
+                              </div>
+                              <div class="hero-stat">
+                                  <span class="hero-stat-number">4</span>
+                                  <span class="hero-stat-label">Ölkə</span>
+                              </div>
+                          </div>
+                     </div>
+                                           <div class="hero-image">
+                          <img src="/images/WhatsApp Image 2025-08-13 at 00.07.21_239912d7.jpg" alt="Dr. Aytən Ziyadova" loading="lazy">
+                      </div>
+                 </div>
+             </div>
+         </section>
 
         <!-- Breadcrumb -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -464,129 +768,135 @@
             </div>
         </nav>
 
-        <!-- About Section -->
-        <section class="section">
+        <!-- Story Section -->
+        <section class="section story-section">
             <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Dr. Ziyadova Kimdir?</h2>
-                        <p>Dr. Ziyadova Azərbaycanın aparıcı uşaq infeksion xəstəlikləri mütəxəssisidir. 10-dan çox illik təcrübəsi ilə o, uşaqların sağlamlığı sahəsində ən yüksək standartlarda xidmət göstərir.</p>
-                        
-                        <h2>Peşəkar Təcrübə</h2>
-                        <p>Dr. Ziyadova uşaq infeksion xəstəlikləri sahəsində geniş təcrübəyə malikdir. O, müxtəlif yaş qruplarındakı uşaqlarda baş verən infeksion xəstəliklərin diaqnozu və müalicəsi sahəsində ixtisaslaşmışdır.</p>
-                        
-                        <h2>Xidmət Sahələri</h2>
-                        <p>Dr. Ziyadova aşağıdakı sahələrdə xidmət göstərir:</p>
-                        <ul style="margin-left: 2rem; color: var(--text-secondary);">
-                            <li>Uşaq infeksion xəstəliklərinin diaqnozu və müalicəsi</li>
-                            <li>Vaksinasiya və profilaktika</li>
-                            <li>Respirator infeksiyaları</li>
-                            <li>Mədə-bağırsaq infeksiyaları</li>
-                            <li>Uşaq sağlamlığı konsultasiyaları</li>
-                        </ul>
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2>Uşaqların Sağlamlığı Üçün Səyahət</h2>
+                        <p>Dr. Aytən Ziyadova Azərbaycanın aparıcı uşaq infeksion xəstəlikləri mütəxəssisidir. 2006-cı ildən başlayan təhsil səyahəti onu dünyanın ən yaxşı tibb mərkəzlərinə aparıb.</p>
+                        <p>İsveçdən Koreyaya, Türkiyədən Azərbaycana qədər geniş beynəlxalq təcrübəsi ilə o, uşaqların sağlamlığı sahəsində ən müasir metodlardan istifadə edir.</p>
+                        <p>Hal-hazırda Referans Mərdəkan Hospital və Leyla Medical Center-də xidmət göstərən Dr. Ziyadova, UNICEF-in Azərbaycan region üzrə təlimçi spikeri kimi də fəaliyyət göstərir.</p>
                     </div>
-                    <div class="about-image">
-                        <img src="/images/doctor-profile.jpg" alt="Dr. Ziyadova" loading="lazy">
-                    </div>
+                                         <div class="story-image">
+                         <img src="/images/WhatsApp Image 2025-08-13 at 00.07.21_239912d7.jpg" alt="Dr. Aytən Ziyadova" loading="lazy">
+                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="section" style="background: var(--bg-secondary);">
+        <!-- Timeline Section -->
+        <section class="section timeline-section">
             <div class="container">
-                <h2 class="section-title">Peşəkar Nailiyyətlər</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>10+</h3>
-                        <p>İllik Təcrübə</p>
+                <h2 class="section-title">Peşəkar Səyahət</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2006-2012</div>
+                            <div class="timeline-title">Azərbaycan Tibb Universiteti</div>
+                            <div class="timeline-description">Pediatriya fakültəsində təhsil</div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <h3>1000+</h3>
-                        <p>Məmnun Xəstə</p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2015</div>
+                            <div class="timeline-title">Türkiyə Təcrübəsi</div>
+                            <div class="timeline-description">Ondokuz Mayıs Universitetində infeksion xəstəliklər üzrə ixtisaslaşma</div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <h3>24/7</h3>
-                        <p>Dəstək</p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-title">İsveç Təcrübəsi</div>
+                            <div class="timeline-description">Karolinska Institutet-də pediatrik immun çatışmazlıqlar üzrə təkmilləşdirmə</div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>Peşəkarlıq</p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-title">Koreya Təcrübəsi</div>
+                            <div class="timeline-description">Seoul National University Hospital-də müasir diaqnostika və müalicə təlimi</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-title">Beynəlxalq Təmsilçilik</div>
+                            <div class="timeline-description">ECD-də Azərbaycanı təmsil etmə və UNICEF təlimçi spikeri</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Expertise Section -->
-        <section class="section">
+        <section class="section" style="background: var(--bg-secondary);">
             <div class="container">
                 <h2 class="section-title">İxtisas Sahələri</h2>
                 <div class="expertise-grid">
                     <div class="expertise-card">
-                        <h3>Uşaq İnfeksion Xəstəlikləri</h3>
-                        <p>Müxtəlif yaş qruplarındakı uşaqlarda baş verən infeksion xəstəliklərin diaqnozu və müalicəsi.</p>
+                        <h3>🩺 Yuxarı Tənəffüs Yolları İnfeksiyaları</h3>
+                        <p>Uşaqlarda baş verən respirator infeksiyalarının müasir metodlarla diaqnozu və müalicəsi</p>
                     </div>
                     <div class="expertise-card">
-                        <h3>Vaksinasiya</h3>
-                        <p>Plansız və əlavə vaksinasiya xidmətləri uşaq sağlamlığının qorunması üçün.</p>
+                        <h3>🦠 Uşaq Xəstəlikləri</h3>
+                        <p>Qızılca, suçiçəyi, skarlatina və digər uşaq infeksion xəstəliklərinin müalicəsi</p>
                     </div>
                     <div class="expertise-card">
-                        <h3>Respirator İnfeksiyaları</h3>
-                        <p>Uşaqlarda baş verən respirator infeksiyalarının müalicəsi və profilaktikası.</p>
+                        <h3>🤒 COVID-19 və Post-Virus Fəsadlar</h3>
+                        <p>Uşaqlarda COVID-19 infeksiyası və onun uzunmüddətli təsirlərinin idarə edilməsi</p>
                     </div>
                     <div class="expertise-card">
-                        <h3>Mədə-Bağırsaq İnfeksiyaları</h3>
-                        <p>Uşaqlarda mədə-bağırsaq sistemində baş verən infeksion xəstəliklərin müalicəsi.</p>
+                        <h3>💉 Vaksinasiya və Profilaktika</h3>
+                        <p>Peyvənd cədvəllərinin tərtibi və infeksion xəstəliklərin qarşısının alınması</p>
                     </div>
                     <div class="expertise-card">
-                        <h3>Konsultasiya</h3>
-                        <p>Uşaq sağlamlığı məsələlərində peşəkar konsultasiya xidmətləri.</p>
+                        <h3>🦠 Mədə-Bağırsaq İnfeksiyaları</h3>
+                        <p>Rotavirus, ishal və qusma hallarının müalicəsi</p>
                     </div>
                     <div class="expertise-card">
-                        <h3>Profilaktika</h3>
-                        <p>İnfeksion xəstəliklərin qarşısının alınması üçün profilaktik tədbirlər.</p>
+                        <h3>🩹 İmmun Sistemi Problemləri</h3>
+                        <p>Uzun sürən qızdırmalar və immun zəiflik hallarının diaqnozu</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="section education">
+        <!-- Languages Section -->
+        <section class="section languages-section">
             <div class="container">
-                <h2 class="section-title">Təhsil və Sertifikatlar</h2>
-                <ul class="education-list">
-                    <li class="education-item">
-                        <h4>Həkim Təhsili</h4>
-                        <p>Azərbaycan Tibb Universiteti</p>
-                        <p class="education-year">2010-2016</p>
-                    </li>
-                    <li class="education-item">
-                        <h4>Pediatriya İxtisası</h4>
-                        <p>Uşaq xəstəlikləri sahəsində ixtisas</p>
-                        <p class="education-year">2016-2018</p>
-                    </li>
-                    <li class="education-item">
-                        <h4>İnfeksion Xəstəliklər İxtisası</h4>
-                        <p>Uşaq infeksion xəstəlikləri sahəsində əlavə ixtisas</p>
-                        <p class="education-year">2018-2020</p>
-                    </li>
-                    <li class="education-item">
-                        <h4>Peşəkar Sertifikatlar</h4>
-                        <p>Müxtəlif beynəlxalq konfranslarda iştirak və sertifikatlar</p>
-                        <p class="education-year">2020-2024</p>
-                    </li>
-                </ul>
+                <h2 class="section-title">Beynəlxalq Kommunikasiya</h2>
+                <div class="languages-grid">
+                    <div class="language-card">
+                        <div class="language-name">🇦🇿 Azərbaycan</div>
+                        <div class="language-level">Ana dili</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">🇷🇺 Rus</div>
+                        <div class="language-level">Yaxşı</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">🇬🇧 İngilis</div>
+                        <div class="language-level">Yaxşı</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">🇹🇷 Türk</div>
+                        <div class="language-level">Yaxşı</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">🇰🇷 Koreya</div>
+                        <div class="language-level">Əsas tibbi anlayışlar</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section" style="background: var(--bg-accent);">
+        <section class="cta-section">
             <div class="container">
-                <div style="text-align: center;">
-                    <h2 style="margin-bottom: 1rem;">Dr. Ziyadova ilə Görüşmək İstəyirsiniz?</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">Peşəkar tibbi xidmət üçün bizimlə əlaqə saxlayın</p>
-                    <a href="https://wa.me/994504662244?text=Salam! Dr. Ziyadova ilə görüşmək istəyirəm." class="btn btn-primary">İndi Rezervasiya Et</a>
-                </div>
+                <h2 class="cta-title">Dr. Aytən Ziyadova ilə Görüşmək İstəyirsiniz?</h2>
+                <p class="cta-description">Peşəkar tibbi xidmət və beynəlxalq təcrübə ilə uşağınızın sağlamlığına qayğı göstərin</p>
+                <a href="https://wa.me/994504662244?text=Salam! Dr. Aytən Ziyadova ilə görüşmək istəyirəm." class="btn btn-primary" style="background: white; color: var(--primary-color); font-size: 1.1rem; padding: 1rem 2rem;">İndi Rezervasiya Et</a>
             </div>
         </section>
     </main>
@@ -599,7 +909,7 @@
                     <h3>Əlaqə</h3>
                     <p>Bakı, Azərbaycan</p>
                     <p>Tel: +994 50 466 22 44</p>
-                    <p>Email: info@ziyadovapediatrics.com</p>
+                    <p>Email: aytenziyadova@mail.com</p>
                 </div>
                 <div class="footer-section">
                     <h3>İş Saatları</h3>

@@ -146,8 +146,8 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1e293b;
             padding: 4rem 0;
             position: relative;
         }
@@ -164,12 +164,14 @@
             font-weight: 800;
             margin-bottom: var(--spacing-lg);
             line-height: 1.1;
+            color: #1e293b;
         }
         
         .hero-text p {
             font-size: 1.125rem;
             margin-bottom: var(--spacing-xl);
-            opacity: 0.9;
+            color: #374151;
+            font-weight: 500;
         }
         
         .hero-buttons {
@@ -215,6 +217,40 @@
                 flex-direction: column;
                 align-items: center;
             }
+        }
+        
+        /* Disease cards hover effects */
+        .disease-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            border-color: #3b82f6;
+        }
+        
+        .disease-card:hover .disease-icon {
+            transform: scale(1.1);
+        }
+        
+        .disease-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Button hover effects */
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Contact CTA hover effects */
+        .contact-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+        }
+        
+        .contact-cta .btn-outline:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.2);
         }
     </style>
     
@@ -320,10 +356,10 @@
                     <div class="hero-text">
                         <h1>Uşaqlarınızın Sağlamlığı Bizim Əsas Prioritetimizdir</h1>
                         <p>Dr. Ziyadova - uşaq infeksion xəstəlikləri üzrə təcrübəli həkim. Uşaqlarınızın sağlamlığı üçün peşəkar tibbi xidmət təqdim edirik.</p>
-                        <div class="hero-buttons">
-                            <a href="#" class="btn btn-primary" data-whatsapp="994504662244">Rezervasiya Et</a>
-                            <a href="/az/services.html" class="btn btn-outline">Xidmətlərimiz</a>
-                        </div>
+                                                 <div class="hero-buttons">
+                             <a href="#" class="btn btn-primary" data-whatsapp="994504662244" style="background: #2563eb; color: white;">Rezervasiya Et</a>
+                             <a href="/az/services.html" class="btn btn-outline" style="background: transparent; color: #2563eb; border: 2px solid #2563eb;">Xidmətlərimiz</a>
+                         </div>
                     </div>
                     <div class="hero-image">
                         <img src="/images/WhatsApp Image 2025-08-13 at 00.07.11_569249bc.jpg" alt="Dr. Ziyadova - Uşaq İnfeksion Xəstəlikləri Mütəxəssisi" loading="lazy">
@@ -380,90 +416,72 @@
             </div>
         </section>
         
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>10+</h3>
-                        <p>İllik Təcrübə</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>1000+</h3>
-                        <p>Məmnun Pasient</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>24/7</h3>
-                        <p>Əlaqə Dəstəyi</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>Peşəkarlıq</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         
         <!-- Diseases Section -->
-        <section class="diseases">
+        <section class="diseases" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 4rem 0;">
             <div class="container">
-                <div class="diseases-header">
-                    <h2>Əsas Xəstəliklər</h2>
-                    <p>Uşaq infeksion xəstəlikləri haqqında məlumat</p>
+                <div class="diseases-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1rem;">Əsas Xəstəliklər</h2>
+                    <p style="font-size: 1.125rem; color: #64748b; max-width: 600px; margin: 0 auto;">Uşaq infeksion xəstəlikləri haqqında ətraflı məlumat və müalicə üsulları</p>
                 </div>
                 
-                <div class="diseases-grid">
-                    <a href="/az/diseases/sut-intoleransi.html" class="disease-card">
-                        <img src="/images/WhatsApp Image 2025-08-13 at 00.07.12_71bb2d95.jpg" alt="Süt intoleransı" class="disease-image" loading="lazy">
+                <div class="diseases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <a href="/az/diseases/sut-intoleransi.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3b82f6, #8b5cf6);"></div>
+                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">👶</div>
                         <div class="disease-content">
-                            <h3>Süt İntoleransı</h3>
-                            <p>Laktaza yetməzliyi və süt intoleransı simptomları, diaqnozu və müalicəsi</p>
-                            <div class="disease-meta">
-                                <span>👶 Yenidoğan</span>
-                                <span>📋 Diaqnoz</span>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Süt İntoleransı</h3>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Laktaza yetməzliyi və süt intoleransı simptomları, diaqnozu və müalicəsi</p>
+                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Yenidoğan</span>
+                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">📋 Diaqnoz</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/az/diseases/pilor-stenozu.html" class="disease-card">
-                        <img src="/images/WhatsApp Image 2025-08-13 at 00.07.13_00a78c61.jpg" alt="Pilor stenozu" class="disease-image" loading="lazy">
+                    <a href="/az/diseases/pilor-stenozu.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #10b981, #059669);"></div>
+                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🍼</div>
                         <div class="disease-content">
-                            <h3>Pilor Stenozu</h3>
-                            <p>İnfantil hipertrofik pilor stenozu (IHPS) simptomları və müalicəsi</p>
-                            <div class="disease-meta">
-                                <span>🍼 Bəbək</span>
-                                <span>🔬 Cərrahi</span>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Pilor Stenozu</h3>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">İnfantil hipertrofik pilor stenozu (IHPS) simptomları və müalicəsi</p>
+                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🍼 Bəbək</span>
+                                <span style="background: #fce7f3; color: #be185d; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🔬 Cərrahi</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/az/diseases/invajinasyon.html" class="disease-card">
-                        <img src="/images/WhatsApp Image 2025-08-13 at 00.07.14_1cddb086.jpg" alt="İnvajinasyon" class="disease-image" loading="lazy">
+                    <a href="/az/diseases/invajinasyon.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f59e0b, #d97706);"></div>
+                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🚨</div>
                         <div class="disease-content">
-                            <h3>İnvajinasyon</h3>
-                            <p>Bağırsaq invajinasyonu simptomları və təcili müayinə</p>
-                            <div class="disease-meta">
-                                <span>🚨 Təcili</span>
-                                <span>🏥 Müayinə</span>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">İnvajinasyon</h3>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Bağırsaq invajinasyonu simptomları və təcili müayinə</p>
+                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🚨 Təcili</span>
+                                <span style="background: #f0f9ff; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🏥 Müayinə</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/az/diseases/yoluxucu-xestelikler.html" class="disease-card">
-                        <img src="/images/WhatsApp Image 2025-08-13 at 00.07.15_14a3b6be.jpg" alt="Yoluxucu xəstəliklər" class="disease-image" loading="lazy">
+                    <a href="/az/diseases/yoluxucu-xestelikler.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ef4444, #dc2626);"></div>
+                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🦠</div>
                         <div class="disease-content">
-                            <h3>Yoluxucu Xəstəliklər</h3>
-                            <p>Uşaq yoluxucu xəstəlikləri haqqında ümumi məlumat və qorunma</p>
-                            <div class="disease-meta">
-                                <span>🦠 İnfeksiya</span>
-                                <span>🛡️ Qorunma</span>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Yoluxucu Xəstəliklər</h3>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Uşaq yoluxucu xəstəlikləri haqqında ümumi məlumat və qorunma</p>
+                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🦠 İnfeksiya</span>
+                                <span style="background: #f0fdf4; color: #166534; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🛡️ Qorunma</span>
                             </div>
                         </div>
                     </a>
                 </div>
                 
-                <div class="text-center" style="margin-top: 3rem;">
-                    <a href="/az/diseases/" class="btn btn-primary">Bütün Xəstəliklər</a>
+                <div style="text-align: center;">
+                    <a href="/az/diseases/" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">Bütün Xəstəliklər <span style="font-size: 1.2rem;">→</span></a>
                 </div>
             </div>
         </section>
@@ -537,14 +555,41 @@
         </section>
         
         <!-- Contact CTA Section -->
-        <section class="contact-cta">
-            <div class="container">
-                <div class="contact-cta-content">
-                    <h2>Uşağınızın Sağlamlığı Üçün Bizimlə Əlaqə Saxlayın</h2>
-                    <p>Rezervasiya üçün WhatsApp vasitəsilə əlaqə saxlayın və ya zəng edin</p>
-                    <div class="contact-buttons">
-                        <a href="#" class="btn btn-primary" data-whatsapp="994504662244">WhatsApp İlə Əlaqə</a>
-                        <a href="tel:+994504662244" class="btn btn-outline">+994 50 466 22 44</a>
+        <section class="contact-cta" style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); color: white; padding: 5rem 0; position: relative; overflow: hidden;">
+            <!-- Background Pattern -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="contact-cta-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 24px; padding: 3rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Uşağınızın Sağlamlığı Üçün Bizimlə Əlaqə Saxlayın</h2>
+                        <p style="font-size: 1.25rem; margin-bottom: 2.5rem; opacity: 0.95; line-height: 1.6;">Rezervasiya üçün WhatsApp vasitəsilə əlaqə saxlayın və ya zəng edin</p>
+                        
+                        <div class="contact-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="#" class="btn btn-primary" data-whatsapp="994504662244" style="background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 1rem 2rem; border-radius: 16px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.75rem; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); transition: all 0.3s ease; border: none; font-size: 1.1rem;">
+                                <span style="font-size: 1.5rem;">💬</span>
+                                WhatsApp İlə Əlaqə
+                            </a>
+                            <a href="tel:+994504662244" class="btn btn-outline" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 1rem 2rem; border-radius: 16px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.4); transition: all 0.3s ease; font-size: 1.1rem; backdrop-filter: blur(10px);">
+                                <span style="font-size: 1.5rem;">📞</span>
+                                +994 50 466 22 44
+                            </a>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                                <span style="font-size: 1.2rem;">⏰</span>
+                                <span style="font-size: 0.9rem; font-weight: 500;">24/7 Əlaqə</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                                <span style="font-size: 1.2rem;">🚀</span>
+                                <span style="font-size: 0.9rem; font-weight: 500;">Dərhal Cavab</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                                <span style="font-size: 1.2rem;">👨‍⚕️</span>
+                                <span style="font-size: 0.9rem; font-weight: 500;">Peşəkar Həkim</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
