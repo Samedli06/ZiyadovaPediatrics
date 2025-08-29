@@ -140,20 +140,26 @@ function getEquivalentPath(currentPath, fromLang, toLang) {
     const diseaseSlugs = {
         'az': {
             'sut-intoleransi': 'sut-intoleransi',
-            'pilor-stenozu': 'pilor-stenozu',
-            'invajinasyon': 'invajinasyon',
+            'usaq-yoluxucu-xestelikler': 'usaq-yoluxucu-xestelikler',
+            'sepgili-infeksion-xestelikler': 'sepgili-infeksion-xestelikler',
+            'anadangelme-infeksion-xestelikler': 'anadangelme-infeksion-xestelikler',
+            'rutin-peyvend-cedvelleri': 'rutin-peyvend-cedvelleri',
             'yoluxucu-xestelikler': 'yoluxucu-xestelikler'
         },
         'ru': {
             'sut-intoleransi': 'neperenosimost-moloka',
-            'pilor-stenozu': 'pyloricheskiy-stenoz',
-            'invajinasyon': 'invaginaciya',
+            'usaq-yoluxucu-xestelikler': 'infekcionnye-bolezni-detej',
+            'sepgili-infeksion-xestelikler': 'temperaturnye-infekcionnye-bolezni',
+            'anadangelme-infeksion-xestelikler': 'vrozhdennye-infekcionnye-bolezni',
+            'rutin-peyvend-cedvelleri': 'rutinnye-shemy-vakcinacii',
             'yoluxucu-xestelikler': 'infekcionnye-bolezni-detej'
         },
         'en': {
             'sut-intoleransi': 'milk-intolerance',
-            'pilor-stenozu': 'pyloric-stenosis',
-            'invajinasyon': 'intussusception',
+            'usaq-yoluxucu-xestelikler': 'pediatric-infectious-diseases',
+            'sepgili-infeksion-xestelikler': 'febrile-infectious-diseases',
+            'anadangelme-infeksion-xestelikler': 'congenital-infectious-diseases',
+            'rutin-peyvend-cedvelleri': 'routine-vaccination-schedules',
             'yoluxucu-xestelikler': 'pediatric-infectious-diseases'
         }
     };

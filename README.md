@@ -45,8 +45,10 @@ ZiyadovaPediatrics/
 │   └── diseases/            # Disease pages
 │       ├── index.html       # Diseases overview
 │       ├── sut-intoleransi.html
-│       ├── pilor-stenozu.html
-│       ├── invajinasyon.html
+│       ├── usaq-yoluxucu-xestelikler.html
+│       ├── sepgili-infeksion-xestelikler.html
+│       ├── anadangelme-infeksion-xestelikler.html
+│       ├── rutin-peyvend-cedvelleri.html
 │       └── yoluxucu-xestelikler.html
 │
 ├── ru/                       # Russian pages (same structure as az/)

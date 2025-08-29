@@ -32,6 +32,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Critical CSS -->
     <style>
         :root {
@@ -60,7 +63,7 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background-color: var(--bg-primary);
@@ -394,7 +397,6 @@
                     <a href="/en/services.html" class="nav-link">Services</a>
                     <a href="/en/diseases/" class="nav-link">Diseases</a>
                     <a href="/en/gallery.html" class="nav-link">Gallery</a>
-                    <a href="/en/faq.html" class="nav-link">FAQ</a>
                     <a href="/en/contact.html" class="nav-link">Contact</a>
                     <select id="language-switcher" class="nav-link">
                         <option value="az">AZ</option>
@@ -488,6 +490,48 @@
             </div>
         </section>
 
+        <!-- Diseases Section -->
+        <section class="diseases" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 4rem 0;">
+            <div class="container">
+                <div class="diseases-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1rem;">Main Diseases</h2>
+                    <p style="font-size: 1.125rem; color: #64748b; max-width: 600px; margin: 0 auto;">Detailed information about pediatric infectious diseases and treatment methods</p>
+                </div>
+                
+                <div class="diseases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <a href="/en/diseases/milk-intolerance.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3b82f6, #8b5cf6);"></div>
+                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">👶</div>
+                        <div class="disease-content">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Milk Intolerance</h3>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Symptoms, diagnosis and treatment of lactase deficiency and milk intolerance</p>
+                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Newborn</span>
+                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">📋 Diagnosis</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="/en/diseases/hand-foot-mouth-disease.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f59e0b, #d97706);"></div>
+                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🦠</div>
+                        <div class="disease-content">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Hand, Foot and Mouth Disease</h3>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Infectious viral disease caused by Coxsackie virus. Most common in children</p>
+                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🦠 Virus</span>
+                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Child</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="/en/diseases/" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">All Diseases <span style="font-size: 1.2rem;">→</span></a>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials Section -->
         <section class="section testimonials">
             <div class="container">
@@ -540,7 +584,6 @@
                     <h3>Quick Links</h3>
                     <a href="/en/about.html">About</a>
                     <a href="/en/services.html">Services</a>
-                    <a href="/en/faq.html">FAQ</a>
                     <a href="/en/contact.html">Contact</a>
                 </div>
             </div>
