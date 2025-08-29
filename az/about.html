@@ -111,6 +111,9 @@
         
         .nav-link:hover {
             color: var(--primary-color);
+            transform: translateY(-1px);
+            background: rgba(37, 99, 235, 0.05);
+            border-radius: var(--radius);
         }
         
         .btn {
@@ -130,7 +133,10 @@
         }
         
         .btn-primary:hover {
-            background: var(--primary-dark);
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+            color: white !important;
         }
         
         .hero-section {
@@ -443,6 +449,7 @@
         .expertise-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
         }
         
         .expertise-card h3 {
@@ -479,6 +486,7 @@
         .language-card:hover {
             transform: scale(1.05);
             box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
         }
         
         .language-name {
@@ -539,6 +547,8 @@
         
         .footer-section a:hover {
             color: white;
+            transform: translateX(2px);
+            transition: all 0.3s ease;
         }
         
         .footer-bottom {
@@ -567,7 +577,8 @@
         }
         
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -933,7 +944,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Dr. Ziyadova Pediatrics. Bütün hüquqlar qorunur.</p>
+                                 <p>&copy; 2025 Dr. Ziyadova Pediatrics. Bütün hüquqlar qorunur.</p>
                 <p><a href="/az/privacy.html">Gizlilik Siyasəti</a> | <a href="/az/terms.html">İstifadə Şərtləri</a></p>
             </div>
         </div>
