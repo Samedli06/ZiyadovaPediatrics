@@ -311,6 +311,8 @@
             backdrop-filter: blur(10px);
             border-top: 1px solid #e5e7eb;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 999;
+            width: 100%;
         }
         
         .mobile-nav-list {
@@ -1261,23 +1263,50 @@
             }
         });
         
-        // Mobile menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-                mobileMenuToggle.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
-            });
+        // Mobile menu functionality
+        function initMobileMenu() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
             
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.remove('active');
-                    mobileMenuToggle.innerHTML = '☰';
-                }
-            });
+            if (mobileMenuToggle && mobileMenu) {
+                // Toggle menu on button click
+                mobileMenuToggle.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    if (mobileMenu.style.display === 'block') {
+                        mobileMenu.style.display = 'none';
+                        mobileMenuToggle.innerHTML = '<span>☰</span>';
+                    } else {
+                        mobileMenu.style.display = 'block';
+                        mobileMenuToggle.innerHTML = '<span>✕</span>';
+                    }
+                };
+                
+                // Close menu when clicking outside
+                document.onclick = function(e) {
+                    if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.style.display = 'none';
+                        mobileMenuToggle.innerHTML = '<span>☰</span>';
+                    }
+                };
+                
+                // Close menu when clicking on menu links
+                const menuLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+                menuLinks.forEach(link => {
+                    link.onclick = function() {
+                        mobileMenu.style.display = 'none';
+                        mobileMenuToggle.innerHTML = '<span>☰</span>';
+                    };
+                });
+            }
+        }
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMobileMenu);
+        } else {
+            initMobileMenu();
         }
         
         // Add hover sound effect (optional)
