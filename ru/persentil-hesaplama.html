@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуга Расчета Перцентилей | Др. Зиядова - Специалист по Детским Инфекционным Заболеваниям</title>
+    <meta name="description" content="Профессиональная оценка роста, веса и окружности головы вашего ребенка. Мониторинг показателей роста и обеспечение здорового развития.">
+    <meta name="keywords" content="расчет перцентилей, рост ребенка, оценка роста веса, педиатрические перцентили, развитие ребенка">
+    
+    <!-- Canonical and alternate languages -->
+    <link rel="canonical" href="https://ziyadovapediatrics.com/ru/persentil-hesaplama.html">
+    <link rel="alternate" hreflang="az" href="https://ziyadovapediatrics.com/az/persentil-hesaplama.html">
+    <link rel="alternate" hreflang="ru" href="https://ziyadovapediatrics.com/ru/persentil-hesaplama.html">
+    <link rel="alternate" hreflang="en" href="https://ziyadovapediatrics.com/en/percentile-assessment.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Услуга Расчета Перцентилей - Др. Зиядова">
+    <meta property="og:description" content="Профессиональная оценка роста, веса и окружности головы вашего ребенка">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ziyadovapediatrics.com/ru/persentil-hesaplama.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Noto Sans', 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing-md) 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 0.5rem 1rem;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+            transform: translateY(-1px);
+            background: rgba(37, 99, 235, 0.05);
+            border-radius: var(--radius-md);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+            color: white;
+        }
+        
+        .main-content {
+            padding: 2rem 0;
+        }
+        
+        .page-header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            margin-bottom: 3rem;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .page-description {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #10b981;
+        }
+        
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 1rem;
+        }
+        
+        .info-text {
+            color: #15803d;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .floating-whatsapp:hover {
+            background: #128c7e;
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/ru/" class="logo">Др. Зиядова</a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="/ru/" class="nav-link">Главная</a></li>
+                        <li><a href="/ru/about.html" class="nav-link">О нас</a></li>
+                        <li><a href="/ru/services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="/ru/diseases/" class="nav-link">Заболевания</a></li>
+                        <li><a href="/ru/gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="/ru/contact.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                    
+                    <select id="language-switcher" class="nav-link">
+                        <option value="az">AZ</option>
+                        <option value="ru" selected>RU</option>
+                        <option value="en">EN</option>
+                    </select>
+                    
+                    <a href="#" class="btn btn-primary" data-whatsapp="994504662244">Запись</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Услуга Расчета Перцентилей</h1>
+                <p class="page-description">
+                    Профессиональная оценка роста, веса и окружности головы вашего ребенка. 
+                    Мониторинг показателей роста и обеспечение здорового развития.
+                </p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- What is Percentile Section -->
+            <section class="content-section">
+                <h2 class="section-title">Что такое Перцентиль?</h2>
+                <p class="content-text">
+                    <strong>Перцентиль</strong> - это статистический показатель, который показывает, как параметры 
+                    вашего ребенка (рост, вес, окружность головы) соотносятся с другими детьми того же возраста и пола. 
+                    Этот показатель помогает оценить, является ли рост и развитие ребенка нормальным.
+                </p>
+                
+                <p class="content-text">
+                    Например, если вес вашего ребенка находится в 75-м перцентиле, это означает, что 75% детей 
+                    того же возраста и пола весят меньше вашего ребенка. Это указывает на здоровые показатели роста 
+                    вашего ребенка.
+                </p>
+            </section>
+
+            <!-- Our Service Features -->
+            <section class="content-section">
+                <h2 class="section-title">Особенности Нашей Услуги</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📏</div>
+                        <h3 class="feature-title">Точные Измерения</h3>
+                        <p class="feature-description">
+                            Профессиональное измерение роста, веса и окружности головы медицинскими приборами
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3 class="feature-title">Стандарты ВОЗ</h3>
+                        <p class="feature-description">
+                            Оценка на основе таблиц роста Всемирной организации здравоохранения
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">👩‍⚕️</div>
+                        <h3 class="feature-title">Профессиональная Интерпретация</h3>
+                        <p class="feature-description">
+                            Подробная интерпретация результатов и рекомендации педиатра-инфекциониста
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3 class="feature-title">Мониторинг</h3>
+                        <p class="feature-description">
+                            Отслеживание показателей роста во времени и оценка динамики развития
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3 class="feature-title">Индивидуальный Отчет</h3>
+                        <p class="feature-description">
+                            Подготовка индивидуального отчета о росте для каждого ребенка и предоставление родителям
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3 class="feature-title">Рекомендации</h3>
+                        <p class="feature-description">
+                            Практические рекомендации по питанию, физической активности и здоровому росту
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- When to Get Assessment -->
+            <section class="content-section">
+                <h2 class="section-title">Когда Необходима Оценка Перцентилей?</h2>
+                
+                <div class="info-box">
+                    <h3 class="info-title">Регулярные Проверки</h3>
+                    <p class="info-text">
+                        ✓ Каждые 3 месяца (0-2 года)<br>
+                        ✓ Каждые 6 месяцев (2-6 лет)<br>
+                        ✓ Ежегодно (6 лет и старше)<br>
+                        ✓ Перед поступлением в школу<br>
+                        ✓ При беспокойстве о росте
+                    </p>
+                </div>
+                
+                <p class="content-text">
+                    Оценка перцентилей является важным процессом для обеспечения здорового развития ребенка. 
+                    Благодаря этой услуге можно выявить проблемы роста на ранней стадии и принять необходимые меры.
+                </p>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <div class="container">
+                    <h2 class="cta-title">Для Здорового Роста Вашего Ребенка</h2>
+                    <p class="cta-description">
+                        Свяжитесь с Др. Зиядовой для услуги оценки перцентилей
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" data-whatsapp="994504662244" style="background: rgba(255,255,255,0.2); border: 2px solid white; backdrop-filter: blur(10px);">
+                            Связаться через WhatsApp
+                        </a>
+                        <a href="tel:+994504662244" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);">
+                            Позвонить: +994 50 466 22 44
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Др. Зиядова. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="floating-whatsapp" data-whatsapp="994504662244" aria-label="Связаться через WhatsApp">
+        💬
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Language switcher functionality
+        document.getElementById('language-switcher').addEventListener('change', function() {
+            const selectedLang = this.value;
+            const currentPath = window.location.pathname;
+            
+            let newPath = currentPath;
+            if (selectedLang === 'az') {
+                newPath = currentPath.replace('/ru/', '/az/').replace('persentil-hesaplama', 'persentil-hesaplama');
+            } else if (selectedLang === 'en') {
+                newPath = currentPath.replace('/ru/', '/en/').replace('persentil-hesaplama', 'percentile-assessment');
+            }
+            
+            window.location.href = newPath;
+        });
+
+        // WhatsApp functionality
+        document.querySelectorAll('[data-whatsapp]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const phone = this.getAttribute('data-whatsapp');
+                const message = 'Здравствуйте! Хочу получить информацию об услуге расчета перцентилей.';
+                window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

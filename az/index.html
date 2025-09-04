@@ -71,6 +71,145 @@
             background: var(--bg-primary);
         }
         
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200px 0;
+            }
+            100% {
+                background-position: calc(200px + 100%) 0;
+            }
+        }
+        
+        /* Animation classes */
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-fade-in-left {
+            animation: fadeInLeft 0.8s ease-out forwards;
+        }
+        
+        .animate-fade-in-right {
+            animation: fadeInRight 0.8s ease-out forwards;
+        }
+        
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+        
+        .animate-slide-in-top {
+            animation: slideInFromTop 0.6s ease-out forwards;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Stagger animations for grid items */
+        .services-grid .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .services-grid .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .services-grid .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .services-grid .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .services-grid .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .services-grid .service-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        .diseases-grid .disease-card:nth-child(1) { animation-delay: 0.1s; }
+        .diseases-grid .disease-card:nth-child(2) { animation-delay: 0.2s; }
+        .diseases-grid .disease-card:nth-child(3) { animation-delay: 0.3s; }
+        .diseases-grid .disease-card:nth-child(4) { animation-delay: 0.4s; }
+        .diseases-grid .disease-card:nth-child(5) { animation-delay: 0.5s; }
+        .diseases-grid .disease-card:nth-child(6) { animation-delay: 0.6s; }
+        .diseases-grid .disease-card:nth-child(7) { animation-delay: 0.7s; }
+        .diseases-grid .disease-card:nth-child(8) { animation-delay: 0.8s; }
+        .diseases-grid .disease-card:nth-child(9) { animation-delay: 0.9s; }
+        
+        .testimonials-grid .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonials-grid .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonials-grid .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        
         .header {
             position: sticky;
             top: 0;
@@ -78,6 +217,7 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #e5e7eb;
             z-index: 1000;
+            animation: slideInFromTop 0.6s ease-out;
         }
         
         .container {
@@ -110,20 +250,92 @@
             display: flex;
             list-style: none;
             gap: var(--spacing-lg);
+            margin: 0;
+            padding: 0;
         }
         
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            white-space: nowrap;
         }
         
         .nav-link:hover {
             color: var(--primary-color);
             transform: translateY(-1px);
             background: rgba(37, 99, 235, 0.05);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.1);
+            font-weight: 600;
+        }
+        
+        #language-switcher {
+            background: transparent;
+            border: 1px solid #e5e7eb;
             border-radius: var(--radius-md);
+            padding: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #language-switcher:hover {
+            border-color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.05);
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #e5e7eb;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .mobile-nav-list {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav-item {
+            margin: 0;
+        }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background: rgba(37, 99, 235, 0.05);
+            color: var(--primary-color);
         }
         
         .btn {
@@ -155,6 +367,18 @@
             color: #1e293b;
             padding: 4rem 0;
             position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="%23ffffff" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            animation: float 20s ease-in-out infinite;
         }
         
         .hero-content {
@@ -170,6 +394,7 @@
             margin-bottom: var(--spacing-lg);
             line-height: 1.1;
             color: #1e293b;
+            animation: fadeInLeft 1s ease-out 0.3s both;
         }
         
         .hero-text p {
@@ -177,11 +402,13 @@
             margin-bottom: var(--spacing-xl);
             color: #374151;
             font-weight: 500;
+            animation: fadeInLeft 1s ease-out 0.5s both;
         }
         
         .hero-buttons {
             display: flex;
             gap: var(--spacing-md);
+            animation: fadeInLeft 1s ease-out 0.7s both;
         }
         
         .floating-whatsapp {
@@ -201,15 +428,42 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             z-index: 1000;
             transition: all 0.3s;
+            animation: scaleIn 0.8s ease-out 1s both, pulse 2s infinite 2s;
         }
         
         .floating-whatsapp:hover {
             background: #128c7e;
             transform: scale(1.1) rotate(5deg);
             box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+            animation: none;
+        }
+        
+        @media (max-width: 1024px) {
+            .nav-list {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
         }
         
         @media (max-width: 768px) {
+            .nav-list,
+            #language-switcher,
+            .nav .btn {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+            
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -223,40 +477,226 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .header-content {
+                position: relative;
+            }
         }
         
         /* Disease cards hover effects */
+        .disease-card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
         .disease-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
             border-color: #3b82f6;
         }
         
         .disease-card:hover .disease-icon {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(5deg);
         }
         
         .disease-icon {
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        
+        /* Service cards animations */
+        .service-card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+            font-size: 2.5rem;
         }
         
         /* Button hover effects */
         .btn-primary:hover {
-            transform: translateY(-2px);
+            transform: translateY(-2px) scale(1.02);
             box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
         
         /* Contact CTA hover effects */
         .contact-cta .btn-primary:hover {
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
         }
         
         .contact-cta .btn-outline:hover {
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.02);
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.5);
             box-shadow: 0 12px 35px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Testimonial cards animations */
+        .testimonial-card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* About section animations */
+        .about-content {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        /* Loading animation for images */
+        .hero-image img,
+        .about-image img {
+            opacity: 0;
+            animation: fadeInRight 1s ease-out 0.8s forwards;
+        }
+        
+        /* Shimmer effect for loading states */
+        .shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200px 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        /* Enhanced visual effects */
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced button effects */
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Card hover effects with glow */
+        .service-card,
+        .disease-card,
+        .testimonial-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before,
+        .disease-card::before,
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .service-card:hover::before,
+        .disease-card:hover::before,
+        .testimonial-card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Floating particles effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 6s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 7s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 8s; }
+        
+        /* Responsive animations */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                animation: fadeInUp 0.8s ease-out 0.3s both;
+            }
+            
+            .hero-text p {
+                animation: fadeInUp 0.8s ease-out 0.5s both;
+            }
+            
+            .hero-buttons {
+                animation: fadeInUp 0.8s ease-out 0.7s both;
+            }
         }
     </style>
     
@@ -353,6 +793,19 @@
     <main id="main">
         <!-- Hero Section -->
         <section class="hero">
+            <!-- Floating particles -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
@@ -380,9 +833,10 @@
                 
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">👶</div>
-                        <h3>Yaxşı Uşaq Monitorinqi</h3>
-                        <p>Uşağınızın inkişafını və sağlamlığını müntəzəm olaraq izləyirik</p>
+                        <div class="service-icon">📏</div>
+                        <h3>Persentil Hesaplama Xidməti</h3>
+                        <p>Uşağınızın boy, çəki və baş çevrəsinin peşəkar qiymətləndirilməsi</p>
+                        <a href="/az/persentil-hesaplama.html" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem;">Ətraflı</a>
                     </div>
                     
                     <div class="service-card">
@@ -736,6 +1190,108 @@
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/accordion.js" defer></script>
     <script src="/assets/js/lightbox.js" defer></script>
+    
+    <!-- Animation Script -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.service-card, .disease-card, .testimonial-card, .about-content');
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                observer.observe(el);
+            });
+            
+            // Add floating animation to hero image
+            const heroImage = document.querySelector('.hero-image');
+            if (heroImage) {
+                heroImage.style.animation = 'float 6s ease-in-out infinite';
+            }
+            
+            // Add pulse animation to CTA buttons
+            const ctaButtons = document.querySelectorAll('.contact-cta .btn');
+            ctaButtons.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.animation = 'pulse 0.6s ease-in-out';
+                });
+                
+                btn.addEventListener('animationend', () => {
+                    btn.style.animation = '';
+                });
+            });
+            
+            // Smooth reveal for sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+        
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const rate = scrolled * -0.5;
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                mobileMenuToggle.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    mobileMenuToggle.innerHTML = '☰';
+                }
+            });
+        }
+        
+        // Add hover sound effect (optional)
+        const buttons = document.querySelectorAll('.btn, .disease-card, .service-card');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = button.style.transform + ' scale(1.02)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = button.style.transform.replace(' scale(1.02)', '');
+            });
+        });
+    </script>
     
     <!-- Disclaimer -->
     <div class="disclaimer" style="background: #f3f4f6; padding: 1rem; margin-top: 2rem; border-radius: 0.5rem; font-size: 0.875rem; color: #6b7280;">
