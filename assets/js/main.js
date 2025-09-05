@@ -1,5 +1,23 @@
 // ===== MAIN JAVASCRIPT FILE =====
 
+// Modern intersection observer for animations
+const createAnimationObserver = () => {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    return new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+};
+
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
@@ -7,7 +25,38 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeWhatsAppLinks();
     initializeScrollEffects();
     initializeAccessibility();
+    initializeModernAnimations();
 });
+
+// ===== MODERN ANIMATIONS =====
+function initializeModernAnimations() {
+    const observer = createAnimationObserver();
+    
+    // Observe elements for scroll animations
+    const animatedElements = document.querySelectorAll(
+        '.card, .service-card, .disease-card, .testimonial-card, .stat-item, .contact-item'
+    );
+    
+    animatedElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        el.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(el);
+    });
+    
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.card, .service-card, .disease-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
 
 // ===== NAVIGATION =====
 function initializeNavigation() {
@@ -15,13 +64,24 @@ function initializeNavigation() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
     
+    console.log('Initializing navigation...');
+    console.log('Mobile menu toggle:', mobileMenuToggle);
+    console.log('Mobile menu:', mobileMenu);
+    
     // Mobile menu toggle
     if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        console.log('Mobile menu elements found, adding event listener');
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Mobile menu toggle clicked');
             mobileMenu.classList.toggle('active');
             const isOpen = mobileMenu.classList.contains('active');
+            console.log('Menu is now:', isOpen ? 'open' : 'closed');
             mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+            mobileMenuToggle.innerHTML = isOpen ? '✕' : '☰';
         });
+    } else {
+        console.log('Mobile menu elements not found!');
     }
     
     // Close mobile menu when clicking on a link
@@ -30,6 +90,7 @@ function initializeNavigation() {
             if (mobileMenu) {
                 mobileMenu.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.innerHTML = '☰';
             }
         });
     });
@@ -40,6 +101,7 @@ function initializeNavigation() {
             if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
                 mobileMenu.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.innerHTML = '☰';
             }
         }
     });
@@ -249,45 +311,51 @@ function initializeScrollEffects() {
         });
     });
     
-    // Header scroll effect
+    // Modern header scroll effect
     const header = document.querySelector('.header');
     if (header) {
         let lastScrollTop = 0;
+        let ticking = false;
         
-        window.addEventListener('scroll', function() {
+        const updateHeader = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
-                header.style.transform = 'translateY(-100%)';
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
             } else {
-                // Scrolling up
-                header.style.transform = 'translateY(0)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.boxShadow = '0 1px 3px 0 rgb(0 0 0 / 0.1)';
             }
             
             lastScrollTop = scrollTop;
+            ticking = false;
+        };
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
         });
     }
     
-    // Intersection Observer for animations
-    if ('IntersectionObserver' in window) {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    // Modern parallax effect for hero sections
+    const heroSections = document.querySelectorAll('.hero, .page-header');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
         
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        const animateElements = document.querySelectorAll('.card, .service-card, .disease-card');
-        animateElements.forEach(el => observer.observe(el));
-    }
+        heroSections.forEach(hero => {
+            const rate = scrolled * -0.3;
+            const heroBackground = hero.querySelector('::before');
+            if (heroBackground) {
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        });
+    });
 }
 
 // ===== ACCESSIBILITY =====
@@ -419,5 +487,7 @@ window.ZiyadovaPediatrics = {
     formatPhoneNumber,
     validateEmail,
     getDeviceType,
-    isInViewport
+    isInViewport,
+    createAnimationObserver,
+    initializeModernAnimations
 };

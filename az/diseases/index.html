@@ -80,7 +80,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: var(--spacing-md) 0;
+            padding: 0.25rem 0;
         }
         
         .logo {
@@ -88,6 +88,17 @@
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 2rem;
+        }
+        
+        .logo img {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+            max-width: 300px;
         }
         
         .nav {
@@ -283,6 +294,19 @@
                 font-size: 2rem;
             }
             
+            .logo {
+                margin-left: 1rem;
+            }
+            
+            .logo img {
+                height: 90px;
+                max-width: 220px;
+            }
+            
+            .header-content {
+                padding: 0.125rem 0;
+            }
+            
             .diseases-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -300,7 +324,9 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/az/" class="logo">Dr. Ziyadova</a>
+                <a href="/az/" class="logo">
+                    <img src="/images/logo.jpg" alt="Dr. Ziyadova">
+                </a>
                 <nav class="nav">
                     <a href="/az/">Ana Səhifə</a>
                     <a href="/az/about.html">Haqqımızda</a>
