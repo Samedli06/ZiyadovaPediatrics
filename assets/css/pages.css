@@ -145,26 +145,10 @@
     overflow: hidden;
 }
 
-.service-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(16, 185, 129, 0.05));
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-}
-
 .service-card:hover {
     transform: translateY(-12px) scale(1.03);
     box-shadow: var(--shadow-2xl);
     border-color: var(--primary-light);
-}
-
-.service-card:hover::after {
-    opacity: 1;
 }
 
 .service-icon {
