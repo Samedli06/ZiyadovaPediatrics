@@ -214,12 +214,18 @@
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+            margin-right: 4rem;
+            gap: var(--spacing-sm);
         }
         
         .nav {
             display: flex;
             gap: 2rem;
             align-items: center;
+            margin-left: auto;
         }
         
         .nav-link {
@@ -864,24 +870,59 @@
         </section>
 
         <!-- Services Section -->
-        <section class="section">
+        <section class="section services">
             <div class="container">
-                <h2 class="section-title">Наши Услуги</h2>
+                <div class="services-header">
+                    <h2 class="section-title">Наши Услуги</h2>
+                    <p>Профессиональные медицинские услуги для здоровья ваших детей</p>
+                </div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">👶</div>
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+                            </svg>
+                        </div>
                         <h3>Диагностика инфекционных заболеваний</h3>
-                        <p>Точная диагностика и лечение различных инфекционных заболеваний у детей</p>
+                        <p>Точная диагностика и лечение различных инфекционных заболеваний у детей с современными протоколами лечения и профессиональным подходом</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Точная диагностика</span>
+                            <span class="feature-tag">✓ Современное лечение</span>
+                        </div>
                     </div>
+                    
                     <div class="service-card">
-                        <div class="service-icon">💉</div>
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.17 16.83L8 18l-2-2 1.17-1.17L9.17 16.83zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                            </svg>
+                        </div>
                         <h3>Вакцинация</h3>
-                        <p>Плановые и дополнительные прививки для защиты здоровья ребенка</p>
+                        <p>Плановые и дополнительные прививки для защиты здоровья ребенка. График вакцинации согласно мировым стандартам</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Плановые прививки</span>
+                            <span class="feature-tag">✓ Дополнительная защита</span>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏥</div>
-                        <h3>Консультации</h3>
-                        <p>Профессиональные консультации по вопросам детского здоровья</p>
+                    
+                    <div class="service-card percentile-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/>
+                            </svg>
+                        </div>
+                        <h3>Оценка Перцентилей</h3>
+                        <p>Сравните рост, вес и окружность головы вашего ребенка со сверстниками и отслеживайте динамику развития</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Отслеживание развития</span>
+                            <span class="feature-tag">✓ Статистический анализ</span>
+                        </div>
+                        <a href="/ru/persentil-hesaplama.html" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                            Оценить сейчас
+                        </a>
                     </div>
                 </div>
             </div>
@@ -929,69 +970,66 @@
         </section>
 
         <!-- Diseases Section -->
-        <section class="diseases" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 4rem 0;">
+        <section class="section diseases">
             <div class="container">
-                <div class="diseases-header" style="text-align: center; margin-bottom: 3rem;">
-                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1rem;">Основные Заболевания</h2>
-                    <p style="font-size: 1.125rem; color: #64748b; max-width: 600px; margin: 0 auto;">Подробная информация о детских инфекционных заболеваниях и методах лечения</p>
+                <div class="diseases-header">
+                    <h2 class="section-title">Основные Заболевания</h2>
+                    <p>Подробная информация о детских инфекционных заболеваниях и методах лечения</p>
                 </div>
                 
-                <div class="diseases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    <a href="/ru/diseases/neperenosimost-moloka.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3b82f6, #8b5cf6);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">👶</div>
+                <div class="diseases-grid">
+                    <a href="/ru/diseases/neperenosimost-moloka.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Непереносимость Молока</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Симптомы, диагностика и лечение лактазной недостаточности и непереносимости молока</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Новорожденный</span>
-                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">📋 Диагностика</span>
+                            <h3>Непереносимость Молока</h3>
+                            <p>Симптомы, диагностика и лечение лактазной недостаточности и непереносимости молока</p>
+                            <div class="disease-meta">
+                                <span style="background: #dbeafe; color: #1e40af; border-color: #93c5fd;">Новорожденный</span>
+                                <span style="background: #fef3c7; color: #92400e; border-color: #fcd34d;">Диагностика</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/ru/diseases/bolezn-ruk-stopy-rt.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f59e0b, #d97706);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🦠</div>
+                    <a href="/ru/diseases/bolezn-ruk-stopy-rt.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Болезнь Рук, Стоп и Рта</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Инфекционное вирусное заболевание, вызванное вирусом Коксаки. Чаще встречается у детей</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🦠 Вирус</span>
-                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Ребенок</span>
+                            <h3>Болезнь Рук, Стоп и Рта</h3>
+                            <p>Инфекционное вирусное заболевание, вызванное вирусом Коксаки. Чаще встречается у детей</p>
+                            <div class="disease-meta">
+                                <span style="background: #fef3c7; color: #92400e; border-color: #fcd34d;">Вирус</span>
+                                <span style="background: #fef2f2; color: #dc2626; border-color: #fca5a5;">Ребенок</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/ru/diseases/stolbnyak.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #dc2626, #991b1b);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🦠</div>
+                    <a href="/ru/diseases/stolbnyak.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Что такое столбняк?</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Подробная информация о столбняке, симптомах и методах лечения</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🦠 Бактерия</span>
-                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">⚠️ Опасный</span>
+                            <h3>Что такое столбняк?</h3>
+                            <p>Подробная информация о столбняке, симптомах и методах лечения</p>
+                            <div class="disease-meta">
+                                <span style="background: #fef2f2; color: #dc2626; border-color: #fca5a5;">Бактерия</span>
+                                <span style="background: #fef3c7; color: #92400e; border-color: #fcd34d;">Опасный</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/ru/diseases/grafik-privivok.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #10b981, #059669);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">💉</div>
+                    <a href="/ru/diseases/grafik-privivok.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">В нашей стране есть вакцины против 11 тяжелых заболеваний</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">График детских прививок в Азербайджане и защита от 11 тяжелых заболеваний</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">💉 Вакцина</span>
-                                <span style="background: #f0f9ff; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🛡️ Защита</span>
+                            <h3>В нашей стране есть вакцины против 11 тяжелых заболеваний</h3>
+                            <p>График детских прививок в Азербайджане и защита от 11 тяжелых заболеваний</p>
+                            <div class="disease-meta">
+                                <span style="background: #dcfce7; color: #166534; border-color: #86efac;">Вакцина</span>
+                                <span style="background: #f0f9ff; color: #0369a1; border-color: #93c5fd;">Защита</span>
                             </div>
                         </div>
                     </a>
                 </div>
                 
-                <div style="text-align: center;">
-                    <a href="/ru/diseases/" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">Все Заболевания <span style="font-size: 1.2rem;">→</span></a>
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="/ru/diseases/" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                        Все Заболевания
+                    </a>
                 </div>
             </div>
         </section>
@@ -1122,15 +1160,7 @@
             });
         });
         
-        // Parallax effect for hero background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                const rate = scrolled * -0.5;
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-        });
+        // Parallax effect removed - hero section now static
         
         // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

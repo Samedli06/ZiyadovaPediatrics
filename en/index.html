@@ -214,12 +214,18 @@
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+            margin-right: 4rem;
+            gap: var(--spacing-sm);
         }
         
         .nav {
             display: flex;
             gap: 2rem;
             align-items: center;
+            margin-left: auto;
         }
         
         .nav-link {
@@ -864,31 +870,59 @@
         </section>
 
         <!-- Services Section -->
-        <section class="section">
+        <section class="section services">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
+                <div class="services-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p>Professional medical services for your children's health</p>
+                </div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">👶</div>
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+                            </svg>
+                        </div>
                         <h3>Infectious Disease Diagnosis</h3>
-                        <p>Accurate diagnosis and treatment of various infectious diseases in children</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">💉</div>
-                        <h3>Vaccination</h3>
-                        <p>Routine and additional vaccinations for child health protection</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏥</div>
-                        <h3>Consultations</h3>
-                        <p>Professional consultations on children's health issues</p>
+                        <p>Accurate diagnosis and treatment of various infectious diseases in children with modern treatment protocols and professional approach</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Accurate diagnosis</span>
+                            <span class="feature-tag">✓ Modern treatment</span>
+                        </div>
                     </div>
                     
-                    <div class="service-card" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border: 2px solid #3b82f6;">
-                        <div class="service-icon" style="background: #3b82f6; color: white;">📏</div>
-                        <h3 style="color: #1e40af;">Percentile Assessment</h3>
-                        <p style="color: #374151;">Compare your child's height, weight and head circumference with peers</p>
-                        <a href="/en/percentile-assessment.html" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem;">Assess</a>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.17 16.83L8 18l-2-2 1.17-1.17L9.17 16.83zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                            </svg>
+                        </div>
+                        <h3>Vaccination</h3>
+                        <p>Routine and additional vaccinations for child health protection. Vaccination schedule according to world standards</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Routine vaccines</span>
+                            <span class="feature-tag">✓ Additional protection</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card percentile-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/>
+                            </svg>
+                        </div>
+                        <h3>Percentile Assessment</h3>
+                        <p>Compare your child's height, weight and head circumference with peers and track development dynamics</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Development tracking</span>
+                            <span class="feature-tag">✓ Statistical analysis</span>
+                        </div>
+                        <a href="/en/percentile-assessment.html" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                            Assess Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -936,69 +970,66 @@
         </section>
 
         <!-- Diseases Section -->
-        <section class="diseases" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 4rem 0;">
+        <section class="section diseases">
             <div class="container">
-                <div class="diseases-header" style="text-align: center; margin-bottom: 3rem;">
-                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1rem;">Main Diseases</h2>
-                    <p style="font-size: 1.125rem; color: #64748b; max-width: 600px; margin: 0 auto;">Detailed information about pediatric infectious diseases and treatment methods</p>
+                <div class="diseases-header">
+                    <h2 class="section-title">Main Diseases</h2>
+                    <p>Detailed information about pediatric infectious diseases and treatment methods</p>
                 </div>
                 
-                <div class="diseases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    <a href="/en/diseases/milk-intolerance.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3b82f6, #8b5cf6);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">👶</div>
+                <div class="diseases-grid">
+                    <a href="/en/diseases/milk-intolerance.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Milk Intolerance</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Symptoms, diagnosis and treatment of lactase deficiency and milk intolerance</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Newborn</span>
-                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">📋 Diagnosis</span>
+                            <h3>Milk Intolerance</h3>
+                            <p>Symptoms, diagnosis and treatment of lactase deficiency and milk intolerance</p>
+                            <div class="disease-meta">
+                                <span style="background: #dbeafe; color: #1e40af; border-color: #93c5fd;">Newborn</span>
+                                <span style="background: #fef3c7; color: #92400e; border-color: #fcd34d;">Diagnosis</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/en/diseases/hand-foot-mouth-disease.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f59e0b, #d97706);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🦠</div>
+                    <a href="/en/diseases/hand-foot-mouth-disease.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">Hand, Foot and Mouth Disease</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Infectious viral disease caused by Coxsackie virus. Most common in children</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🦠 Virus</span>
-                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">👶 Child</span>
+                            <h3>Hand, Foot and Mouth Disease</h3>
+                            <p>Infectious viral disease caused by Coxsackie virus. Most common in children</p>
+                            <div class="disease-meta">
+                                <span style="background: #fef3c7; color: #92400e; border-color: #fcd34d;">Virus</span>
+                                <span style="background: #fef2f2; color: #dc2626; border-color: #fca5a5;">Child</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/en/diseases/tetanus.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #dc2626, #991b1b);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">🦠</div>
+                    <a href="/en/diseases/tetanus.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">What is Tetanus?</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Detailed information about Tetanus disease, symptoms and treatment methods</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🦠 Bacteria</span>
-                                <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">⚠️ Dangerous</span>
+                            <h3>What is Tetanus?</h3>
+                            <p>Detailed information about Tetanus disease, symptoms and treatment methods</p>
+                            <div class="disease-meta">
+                                <span style="background: #fef2f2; color: #dc2626; border-color: #fca5a5;">Bacteria</span>
+                                <span style="background: #fef3c7; color: #92400e; border-color: #fcd34d;">Dangerous</span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="/en/diseases/vaccination-schedule.html" class="disease-card" style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
-                        <div class="disease-card-bg" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #10b981, #059669);"></div>
-                        <div class="disease-icon" style="font-size: 3rem; margin-bottom: 1rem;">💉</div>
+                    <a href="/en/diseases/vaccination-schedule.html" class="disease-card">
                         <div class="disease-content">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 1rem;">There are vaccines against 11 severe diseases in our country</h3>
-                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Child vaccination schedule in Azerbaijan and protection against 11 severe diseases</p>
-                            <div class="disease-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span style="background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">💉 Vaccine</span>
-                                <span style="background: #f0f9ff; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">🛡️ Protection</span>
+                            <h3>There are vaccines against 11 severe diseases in our country</h3>
+                            <p>Child vaccination schedule in Azerbaijan and protection against 11 severe diseases</p>
+                            <div class="disease-meta">
+                                <span style="background: #dcfce7; color: #166534; border-color: #86efac;">Vaccine</span>
+                                <span style="background: #f0f9ff; color: #0369a1; border-color: #93c5fd;">Protection</span>
                             </div>
                         </div>
                     </a>
                 </div>
                 
-                <div style="text-align: center;">
-                    <a href="/en/diseases/" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">All Diseases <span style="font-size: 1.2rem;">→</span></a>
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="/en/diseases/" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                        All Diseases
+                    </a>
                 </div>
             </div>
         </section>
@@ -1129,15 +1160,7 @@
             });
         });
         
-        // Parallax effect for hero background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                const rate = scrolled * -0.5;
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-        });
+        // Parallax effect removed - hero section now static
         
         // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
