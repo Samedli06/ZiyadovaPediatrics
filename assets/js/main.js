@@ -115,10 +115,27 @@ function highlightActiveNav() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
     
+    // Remove existing active classes first
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href && currentPath.includes(href.replace(/^\//, ''))) {
-            link.classList.add('active');
+        if (href) {
+            // Check for home pages (exact match)
+            if ((href === '/az/' || href === '/ru/' || href === '/en/') && 
+                (currentPath === href || currentPath === href + 'index.html')) {
+                link.classList.add('active');
+            }
+            // Exact match for other pages
+            else if (currentPath === href) {
+                link.classList.add('active');
+            }
+            // Special case for diseases section
+            else if (href.endsWith('/diseases/') && currentPath.startsWith(href)) {
+                link.classList.add('active');
+            }
         }
     });
 }

@@ -243,7 +243,8 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            margin-left: 2rem;
+            margin-left: 0;
+            margin-right: 4rem;
             gap: var(--spacing-sm);
         }
         
@@ -258,6 +259,7 @@
             display: flex;
             align-items: center;
             gap: var(--spacing-lg);
+            margin-left: auto;
         }
         
         .nav-list {
@@ -904,26 +906,51 @@
                 </div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">🩺</div>
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+                            </svg>
+                        </div>
                         <h3>İnfeksion Xəstəliklərin Diaqnozu</h3>
-                        <p>Uşaqlarda müxtəlif infeksion xəstəliklərin dəqiq diaqnozu və müalicəsi</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">💉</div>
-                        <h3>Peyvəndləmə</h3>
-                        <p>Uşaq sağlamlığının qorunması üçün rutin və əlavə peyvəndlər</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏥</div>
-                        <h3>Konsultasiyalar</h3>
-                        <p>Uşaq sağlamlığı məsələləri üzrə peşəkar konsultasiyalar</p>
+                        <p>Uşaqlarda müxtəlif infeksion xəstəliklərin dəqiq diaqnozu və müasir müalicə protokolları ilə peşəkar yanaşma</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Dəqiq diaqnoz</span>
+                            <span class="feature-tag">✓ Müasir müalicə</span>
+                        </div>
                     </div>
                     
-                    <div class="service-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-color: #38bdf8;">
-                        <div class="service-icon" style="background: linear-gradient(135deg, #0ea5e9, #0284c7);">📏</div>
-                        <h3 style="color: #0369a1;">Persentil Qiymətləndirməsi</h3>
-                        <p style="color: #475569;">Uşağınızın boy, çəki və baş çevrəsinin yaşıdaşları ilə müqayisəsi</p>
-                        <a href="/az/persentil-hesaplama.html" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem;">Qiymətləndir</a>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.17 16.83L8 18l-2-2 1.17-1.17L9.17 16.83zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                            </svg>
+                        </div>
+                        <h3>Peyvəndləmə</h3>
+                        <p>Uşaq sağlamlığının qorunması üçün rutin və əlavə peyvəndlər. Dünya standartlarına uyğun peyvənd təqvimi</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ Rutin peyvəndlər</span>
+                            <span class="feature-tag">✓ Əlavə qorunma</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card percentile-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/>
+                            </svg>
+                        </div>
+                        <h3>Persentil Qiymətləndirməsi</h3>
+                        <p>Uşağınızın boy, çəki və baş çevrəsinin yaşıdaşları ilə müqayisəsi və inkişaf dinamikasının izlənməsi</p>
+                        <div class="service-features">
+                            <span class="feature-tag">✓ İnkişaf izləmə</span>
+                            <span class="feature-tag">✓ Statistik analiz</span>
+                        </div>
+                        <a href="/az/persentil-hesaplama.html" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                            İndi Qiymətləndir
+                        </a>
                     </div>
                 </div>
             </div>
@@ -985,7 +1012,6 @@
                 
                 <div class="diseases-grid">
                     <a href="/az/diseases/sut-intoleransi.html" class="disease-card">
-                        <div class="disease-icon">👶</div>
                         <div class="disease-content">
                             <h3>Süt İntoleransı</h3>
                             <p>Laktaza yetməzliği və süt intoleransı simptomları, diaqnozu və müalicəsi</p>
@@ -997,7 +1023,6 @@
                     </a>
                     
                     <a href="/az/diseases/el-ayaq-agiz-xesteliyi.html" class="disease-card">
-                        <div class="disease-icon">🦠</div>
                         <div class="disease-content">
                             <h3>El Ayaq Ağız Xəstəliyi</h3>
                             <p>Coxsackie virusunun törətdiyi yoluxucu xəstəlik. Əsasən uşaqlarda baş verir</p>
@@ -1009,7 +1034,6 @@
                     </a>
                     
                     <a href="/az/diseases/tetanus.html" class="disease-card">
-                        <div class="disease-icon">🦠</div>
                         <div class="disease-content">
                             <h3>Tetanus nədir?</h3>
                             <p>Tetanus xəstəliyi haqqında ətraflı məlumat, simptomlar və müalicə üsulları</p>
@@ -1021,7 +1045,6 @@
                     </a>
                     
                     <a href="/az/diseases/peyvend-təqvimi.html" class="disease-card">
-                        <div class="disease-icon">💉</div>
                         <div class="disease-content">
                             <h3>Ölkəmizdə 11 ağır xəstəliyə qarşı peyvənd mövcuddur</h3>
                             <p>Azərbaycanda uşaq peyvənd təqvimi və 11 ağır xəstəliyə qarşı qorunma</p>

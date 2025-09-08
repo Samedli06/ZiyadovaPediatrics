@@ -149,6 +149,17 @@
     max-width: 300px;
 }
 
+.logo:hover {
+    color: inherit;
+    text-decoration: none;
+    transform: none;
+}
+
+.logo:hover img {
+    transform: none;
+    filter: none;
+}
+
 .logo::before {
     content: '🏥';
     font-size: var(--font-size-xl);
