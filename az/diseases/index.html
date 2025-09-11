@@ -61,14 +61,13 @@
             background: var(--bg-primary);
         }
         
-        .header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e7eb;
-            z-index: 1000;
-        }
+        .header{
+        position: sticky;
+        top: 0;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+      }
         
         .container {
             max-width: 1200px;
@@ -100,10 +99,23 @@
             object-fit: contain;
             max-width: 300px;
         }
+
+        .btn-primary {
+        background: #008ece;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s;
+        }
+        .btn-primary:hover {
+        background: #558ca6;
+        }
         
         .nav {
             display: flex;
             gap: 2rem;
+            color: #1f2937;
             align-items: center;
         }
         
@@ -111,6 +123,7 @@
             text-decoration: none;
             color: var(--text-primary);
             font-weight: 500;
+            color: #122832;
             transition: color 0.3s ease;
         }
         
@@ -121,6 +134,10 @@
         .language-switcher {
             display: flex;
             gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+      background: #008ece;
         }
         
         .language-switcher a {
@@ -290,6 +307,29 @@
             border-top: 1px solid #374151;
             color: #9ca3af;
         }
+
+        .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+    }
+    .mobile-menu {
+      display: none;
+      background: #f9fafb;
+      padding: 1rem;
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      color: #1f2937;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .mobile-menu a.active {
+      color: #2563eb;
+      font-weight: bold;
+    }
         
         @media (max-width: 768px) {
             .hero h1 {
@@ -318,29 +358,58 @@
             .nav {
                 display: none;
             }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .mobile-menu.show {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <!-- Navbar (Desktop və Mobil) -->
+    <header>
         <div class="container">
             <div class="header-content">
-                <a href="/az/" class="logo">
-                    <img src="/images/logo.jpg" alt="Dr. Ziyadova">
-                </a>
-                <nav class="nav">
-                    <a href="/az/">Ana Səhifə</a>
-                    <a href="/az/about.html">Haqqımızda</a>
-                    <a href="/az/services.html">Xidmətlər</a>
-                    <a href="/az/contact.html">Əlaqə</a>
-                </nav>
-                <div class="language-switcher">
-                    <a href="/az/diseases/" class="active">AZ</a>
-                    <a href="/en/diseases/">EN</a>
-                    <a href="/ru/diseases/">RU</a>
-                </div>
+            <a href="/az/" class="logo">
+                <img src="/images/logo.jpg" alt="Dr. Ziyadova">
+            </a>
+
+            <nav class="nav">
+                <a href="/az/">Ana Səhifə</a>
+                <a href="/az/about.html">Həkim Haqqında</a>
+                <a href="/az/services.html">Xidmətlər</a>
+                <a href="/az/diseases/" class="active">Xəstəliklər</a>
+                <a href="/az/gallery.html">Qalereya</a>
+                <a href="/az/contact.html">Əlaqə</a>
+                <select id="language-switcher">
+                <option value="az" selected>AZ</option>
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+                </select>
+                <a href="https://wa.me/994504662244" class="btn-primary">Rezervasiya</a>
+            </nav>
+
+            <button class="mobile-menu-toggle">☰</button>
             </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/az/">Ana Səhifə</a>
+            <a href="/az/about.html">Həkim Haqqında</a>
+            <a href="/az/services.html">Xidmətlər</a>
+            <a href="/az/diseases/" class="active">Xəstəliklər</a>
+            <a href="/az/gallery.html">Qalereya</a>
+            <a href="/az/contact.html">Əlaqə</a>
+            <select id="mobile-language-switcher">
+            <option value="az" selected>AZ</option>
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+            </select>
+            <a href="https://wa.me/994504662244" class="btn-primary">Rezervasiya</a>
         </div>
     </header>
 
