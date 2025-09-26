@@ -110,6 +110,34 @@
         @media(min-width:768px) { 
             .grid { grid-template-columns: repeat(2,1fr); } 
         }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .hero-text {
+            flex: 2;
+        }
+        .hero-image {
+            flex: 1;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 3px solid rgba(255,255,255,0.2);
+        }
+        @media(max-width:768px) { 
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
         ul { margin-left: 1rem; }
         li { 
             margin: .35rem 0; 
@@ -208,8 +236,15 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Услуги</h1>
-                <p>Профилактика, скрининг и вакцинация по возрастным группам</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Услуги</h1>
+                        <p>Профилактика, скрининг и вакцинация по возрастным группам</p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="/images/photo.jpg" alt="Др. Зиядова - Детский Инфекционист" />
+                    </div>
+                </div>
             </div>
         </section>
 

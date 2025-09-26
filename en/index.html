@@ -803,7 +803,7 @@
                 </nav>
                 
                 <button class="mobile-menu-toggle" aria-label="Open menu">
-                    <span>☰</span>
+                    ☰
                 </button>
             </div>
         </div>
@@ -1162,24 +1162,7 @@
         
         // Parallax effect removed - hero section now static
         
-        // Mobile menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-                mobileMenuToggle.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
-            });
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.remove('active');
-                    mobileMenuToggle.innerHTML = '☰';
-                }
-            });
-        }
+        // Mobile menu handled by main.js
     </script>
 </body>
 </html>

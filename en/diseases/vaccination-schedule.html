@@ -343,7 +343,98 @@
             transform: scale(1.1);
         }
         
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-lg);
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        
+        .mobile-menu-toggle:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-100%);
+            transition: var(--transition-normal);
+            max-height: 0;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+            transform: translateY(0);
+        }
+        
+        .mobile-nav-list {
+            list-style: none;
+            padding: var(--spacing-lg) 0;
+        }
+        
+        .mobile-nav-item {
+            margin: 0;
+        }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: var(--spacing-md) var(--spacing-lg);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+        
+        .mobile-language-selector {
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .mobile-language-selector select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            background: white;
+        }
+        
+        .mobile-btn {
+            margin: var(--spacing-md) var(--spacing-lg) !important;
+            display: inline-block !important;
+            text-align: center;
+            border-bottom: none !important;
+        }
+        
         @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
             .hero h1 {
                 font-size: 2rem;
             }
@@ -390,6 +481,48 @@
                     <a href="/az/" class="nav-link">AZ</a>
                     <a href="/ru/" class="nav-link">RU</a>
                 </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Open menu" title="Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="container">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="/en/" class="mobile-nav-link">Home</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/en/about.html" class="mobile-nav-link">About</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/en/services.html" class="mobile-nav-link">Services</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/en/diseases/" class="mobile-nav-link active">Diseases</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/en/gallery.html" class="mobile-nav-link">Gallery</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/en/contact.html" class="mobile-nav-link">Contact</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <div class="mobile-language-selector">
+                            <select id="mobile-language-switcher">
+                                <option value="az">AZ</option>
+                                <option value="ru">RU</option>
+                                <option value="en" selected>EN</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="https://wa.me/994504662244?text=Hello! I would like to meet with a pediatrician." class="btn btn-primary mobile-btn">Book Appointment</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>

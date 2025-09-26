@@ -1236,51 +1236,7 @@
         
         // Removed parallax effect - hero section stays fixed in place
         
-        // Mobile menu functionality
-        function initMobileMenu() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (mobileMenuToggle && mobileMenu) {
-                // Toggle menu on button click
-                mobileMenuToggle.onclick = function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    if (mobileMenu.style.display === 'block') {
-                        mobileMenu.style.display = 'none';
-                        mobileMenuToggle.innerHTML = '<span>☰</span>';
-                    } else {
-                        mobileMenu.style.display = 'block';
-                        mobileMenuToggle.innerHTML = '<span>✕</span>';
-                    }
-                };
-                
-                // Close menu when clicking outside
-                document.onclick = function(e) {
-                    if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-                        mobileMenu.style.display = 'none';
-                        mobileMenuToggle.innerHTML = '<span>☰</span>';
-                    }
-                };
-                
-                // Close menu when clicking on menu links
-                const menuLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
-                menuLinks.forEach(link => {
-                    link.onclick = function() {
-                        mobileMenu.style.display = 'none';
-                        mobileMenuToggle.innerHTML = '<span>☰</span>';
-                    };
-                });
-            }
-        }
-        
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initMobileMenu);
-        } else {
-            initMobileMenu();
-        }
+        // Mobile menu handled by main.js
         
         // Add hover sound effect (optional)
         const buttons = document.querySelectorAll('.btn, .disease-card, .service-card');
